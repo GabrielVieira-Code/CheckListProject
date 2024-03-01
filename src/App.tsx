@@ -1,25 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import * as C  from "./App.stiled";
+import   {ListItem}  from "./components/itemStiled";
 
 function App() {
+
+const [list,setList]= useState<Item[]>([
+  {
+    Id:1,Nome:"jose",Done:false
+  },
+  {
+    Id:2,Nome:"Maria",Done:false
+  }
+])
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <C.Container>
+<C.Header>Tarefas</C.Header>
+<C.Area>
+<ListItem></ListItem>
+</C.Area>
+
+  </C.Container>
   );
 }
 
