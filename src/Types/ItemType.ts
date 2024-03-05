@@ -1,6 +1,6 @@
 
- type Item={
+ export type Item={
     Id: number
     Nome: string
-    Done:boolean
+    done:boolean
 }

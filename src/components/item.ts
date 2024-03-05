@@ -1,17 +1,25 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
-export const Container = styled.button`
+type ContainerProps = {
+    done: boolean 
+};
 
-background-color: #007bff;
-color: white;
-padding: 10px 20px;
-font-size: 16px;
-border: none;
-border-radius: 5px;
-cursor: pointer;
-transition: background-color 0.3s ease;
+export const Container = styled.div<ContainerProps>`
+    display: flex;
+    background-color: #20212C;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-items: center;
 
+    input {
+        width: 25px;
+        height: 25px;
+        margin-right: 5px;
+    }
 
-`
-
-;
+    label {
+        color: #CCC;
+        text-decoration: ${({ done }) => (done ? "line-through" : "initial")};
+    }
+`;
