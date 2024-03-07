@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import * as C  from "./App.stiled";
 import   {ListItem}  from "./components/itemStiled";
-import { Item } from "./types/ItemType";
+import { Item } from "./Types/ItemType";
 import { AddArea } from './components/areaComponent/index';
 
 function App() {
